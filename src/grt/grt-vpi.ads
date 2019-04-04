@@ -47,10 +47,6 @@ package Grt.Vpi is
    vpiDefNetType :    constant Integer := 13;
    vpiDefFile :       constant Integer := 15;
 
-   vpiDefName :       constant Integer :=  9;
-   vpiTimePrecision : constant Integer := 12;
-   vpiDefFile :       constant Integer := 15;
-
    vpiScalar :        constant Integer := 17;
    vpiVector :        constant Integer := 18;
 
