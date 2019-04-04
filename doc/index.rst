@@ -1,6 +1,8 @@
-.. include:: shields.inc
-
 .. only:: html
+
+   .. exec::
+      from helpers import createShields
+      createShields()
 
    |SHIELD:gh-logo| |SHIELD:gitter| |SHIELD:code-lic| |SHIELD:doc-lic| |SHIELD:travis-ci| |SHIELD:appveyor| |SHIELD:release|
 
@@ -19,11 +21,22 @@ LRM) is a plus.
    News
    ****
 
+   23.02.2019 - GHDL v0.36-rc1 was released.
+   =========================================
+
+   The major improvements are:
+
+      * more support of unbounded arrays and records
+      * support of UVVM and Vunit
+
+   29.11.2018 - GHDL 20181129 was released.
+   ========================================
+
    20.12.2017 - A new GitHub organization was created.
    ===================================================
 
-   A new GitHub organization is created and the main repo is moved from github.com/tgingold/ghdl to
-   github.com/ghdl/ghdl. Old refs will continue working, because permanent redirects are set up. However, we suggest
+   A new GitHub organization is created and the main repo is moved from `github.com/tgingold/ghdl <https://github.com/tgingold/ghdl>`_ to
+   `github.com/ghdl/ghdl <https://github.com/ghdl/ghdl>`_. Old refs will continue working, because permanent redirects are set up. However, we suggest
    every contributor to update the remote URLs in their local clones.
 
    14.12.2017 - `GHDL 0.35 was released <https://github.com/ghdl/ghdl/milestone/3?closed=1>`_.
@@ -37,7 +50,13 @@ LRM) is a plus.
 
 .. only:: latex
 
-   .. rubric:: 20.12.2017 - GHDL 0.35 was released.
+   .. rubric:: 23.02.2019 - GHDL v0.36-rc1 was released.
+
+   .. rubric:: 29.11.2018 - GHDL 20181129 was released.
+
+   .. rubric:: 20.12.2017 - A new GitHub organization was created.
+
+   .. rubric:: 14.12.2017 - GHDL 0.35 was released.
 
    .. rubric:: 15.08.2017 - GHDL 0.34 was released.
 

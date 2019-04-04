@@ -189,8 +189,20 @@ package body Grt.Vpi is
             Trace ("vpiFullName");
          when vpiSize =>
             Trace ("vpiSize");
+         when vpiFile =>
+            Trace ("vpiFile");
+         when vpiLineNo =>
+            Trace ("vpiLineNo");
+
+         when vpiDefName =>
+            Trace ("vpiDefName");
          when vpiTimePrecision =>
             Trace ("vpiTimePrecision");
+         when vpiDefFile =>
+            Trace ("vpiDefFile");
+
+         --  Port and net properties
+
          when vpiScalar =>
             Trace ("vpiScalar");
          when vpiVector =>
@@ -586,7 +598,7 @@ package body Grt.Vpi is
    -- vpiHandle  vpi_scan(vpiHandle iter)
    -- Scan the Verilog HDL hierarchy for objects with a one-to-many
    -- relationship.
-   -- see IEEE Std 1800-2017, chapter 38.40, page 1109
+   -- see IEEE 1364-2001, chapter 27.36, page 709
    function Vpi_Scan_Internal (Iter: vpiHandle) return vpiHandle
    is
       Res : VhpiHandleT;
@@ -661,7 +673,7 @@ package body Grt.Vpi is
 
    ------------------------------------------------------------------------
    -- char *vpi_get_str(int property, vpiHandle ref)
-   -- see IEEE Std 1800-2017, page 1061
+   -- see IEEE 1364-2001, page xxx
    Tmpstring2 : String (1 .. 1024);
    function Vpi_Get_Str_Internal (Property : Integer; Ref : vpiHandle)
                                  return Ghdl_C_String
@@ -1193,6 +1205,7 @@ package body Grt.Vpi is
             dbgPut_Line ("vpi_put_value: vpiObjTypeVal");
          when vpiBinStrVal =>
             Ii_Vpi_Put_Value_Bin_Str (Info, Len, aValue.Str);
+            -- dbgPut_Line ("vpi_put_value: vpiBinStrVal");
          when vpiOctStrVal =>
             dbgPut_Line ("vpi_put_value: vpiNet, vpiOctStrVal");
          when vpiDecStrVal =>
